@@ -1,16 +1,17 @@
-// Interface definition.
+// SECTION - START
+// interface definition
 interface User {
     id: number;
     name: string;
 }
 
-// Object creation
+// object creation by type
 const user: User = {
     id: 0,
     name: "Hayes",
 };
 
-// Class creation.
+// class creation
 class UserAccount {
     id: number;
     name: string;
@@ -22,3 +23,4 @@ class UserAccount {
 }
 
 const userAccount: User = new UserAccount(0, "John");
+// SECTION - END
