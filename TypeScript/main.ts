@@ -1,6 +1,13 @@
 // NOTE: Make an example about the below things:
 // symbol type
 // funktors
+// point-free programming
+// importing and exporting
+// readonly modifier
+// type assertions
+// type guards
+// type narrowing
+
 
 // SECTION - START
 class UserAccount {
