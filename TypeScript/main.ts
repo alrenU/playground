@@ -1,4 +1,6 @@
-// NOTE: Try the symbol type.
+// NOTE: Make an example about the below things:
+// symbol type
+// funktors
 
 // SECTION - START
 class UserAccount {
