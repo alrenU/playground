@@ -1,4 +1,12 @@
-// NOTE: Try the symbol type.
+// NOTE: Make an example about the below things:
+// symbol type
+// funktors
+// point-free programming
+// importing and exporting
+// readonly modifier
+// type assertions
+// type guards
+// type narrowing
 // SECTION - START
 var UserAccount = /** @class */ (function () {
     function UserAccount(id, name) {
@@ -51,7 +59,13 @@ printAnimal({ type: "bird", mouthType: "beak" });
 function employee(name, age, gender) {
     console.log("Name: ", name, "Age: ", age, "Gender: ", gender);
 }
+// If you would use just `gender = "man"` it would throw error.
 var gender = "man";
 console.log("\n# Unit Type");
 employee("Josh", 30, gender);
+// Passing object as a parameter.
+function points(pt) {
+    console.log("X: ", pt.x, "Y.", pt.y);
+}
+points({ x: 10, y: 15 });
 // SECTION - END

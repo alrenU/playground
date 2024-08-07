@@ -32,15 +32,22 @@ const user: User = {
 
 const userAccount: User = new UserAccount(0, "John");
 
+
+
 // Generics
 type StringArr = Array<string>;
 type NumberArr = Array<number>;
 type ObjectWithNameArr = Array<{ name: string }>;
 
+
+
 // The `any` Statement
 let num_1: any = "5";
 
+
+
 // Structural Type System
+console.log("\n# Structural Type System");
 interface Coordinates {
     x: number;
     y: number;
@@ -61,18 +68,24 @@ let coordinates_1 = {
     z: 0,
 }
 
-console.log("\n# Structural Type System");
 logCoordinates(coordinates);
 logCoordinates(coordinates_1);
+
+
 
 // Function Type
 let add: (num_1: number, num_2: number) => number = (num_1, num_2) => num_1 + num_2;
 let strConcat: <T, U>(str_1: T, str_2: U) => T = (str_1, str_2) => str_1;
 
+
+
 // Union Types
 let weight: "kg" | "lbs" | number | string | string[] | 1;
 
+
+
 // Discriminated Union
+console.log("\n# Discriminated Union");
 type Animal = { type: "lion", sound: "roar" } | { type: "bird", mouthType: "beak" }
 
 function printAnimal(animal: Animal) {
@@ -83,23 +96,34 @@ function printAnimal(animal: Animal) {
     }
 }
 
-console.log("\n# Discriminated Union");
 printAnimal({ type: "lion", sound: "roar" });
 printAnimal({ type: "bird", mouthType: "beak" });
+
+
 
 // Intersections
 interface A { a: string; };
 interface B { b:string; };
 type C = A & B;
 
+
+
 // Unit Type
+console.log("\n# Unit Type");
 function employee(name: string, age: number, gender: "man" | "woman") {
     console.log("Name: ", name, "Age: ", age, "Gender: ", gender);
 }
 
 // If you would use just `gender = "man"` it would throw error.
 let gender: "man" | "woman" = "man";
-
-console.log("\n# Unit Type");
 employee("Josh", 30, gender);
+
+
+
+// Passing Object as a Parameter
+console.log("\n# Passing Object as a Parameter");
+function printCoord(pt: {x: number, y: number}) {
+    console.log("X: ", pt.x, "Y.", pt.y);
+}
+printCoord({x: 10, y: 15});
 // SECTION - END
